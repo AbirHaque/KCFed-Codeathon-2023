@@ -20,7 +20,8 @@ export function HomePage(){
                     
     return (
         <>
-
+        <h1 className="text-center">Simulearn</h1>
+        <h2 className="text-center">Choose a tutorial to get started</h2>
 
         <Nav className="nav-pills nav-fill gap-2 p-1 small bg-primary rounded-5 shadow-sm" id="pillNav2" role="tablist" style={{ '--bs-nav-link-color': 'var(--bs-white)', '--bs-nav-pills-link-active-color': 'var(--bs-primary)', '--bs-nav-pills-link-active-bg': 'var(--bs-white)',  marginTop: '2%', marginLeft: '3%', marginRight: '3%' }}>
         {choices.map((choice, index) => (
