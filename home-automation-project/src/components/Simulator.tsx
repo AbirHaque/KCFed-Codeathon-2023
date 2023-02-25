@@ -18,6 +18,7 @@ export function Simulator({tutorial}: SimulatorProps){
         setIsCorrectAnswer(true);
     }
 
+
     return <>
         <Container style={{height: '100%', paddingLeft: '30px'}}>
             <Row style={{height:'50%'}}>
