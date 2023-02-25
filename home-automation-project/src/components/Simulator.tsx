@@ -11,11 +11,11 @@ type SimulatorProps = {
 export function Simulator({tutorial}: SimulatorProps){
 
     //const displayStyle = isExpanded ? 'visible' : 'hidden';
-    const [isCorrectAnswer, setIsCorrectAnswer] = useState<boolean>(true);
+    const [isCorrectAnswer, setIsCorrectAnswer] = useState<boolean>(false);
     const image: string = isCorrectAnswer ? tutorial.resultImage : tutorial.baseImage;
 
-    function setCorrectAnswerHandler(){
-        setIsCorrectAnswer(true);
+    function setCorrectAnswerHandler(isCorrectAnswerParam: boolean){
+        setIsCorrectAnswer(isCorrectAnswerParam);
     }
 
 
