@@ -11,11 +11,6 @@ const Tutorial = (props) => {
       <h3>Tutorial {number}: {title}</h3>
       
       <h3><pre>{text}</pre></h3>
-      
-
-
-
-
     </div>
   );
 };
