@@ -44,7 +44,7 @@ export function HomePage(){
                 <Card.Text>
                 {tutorials.at(selectedTutorial)?.summaryDescription}
                 </Card.Text>
-                <Button variant="primary">Start</Button>
+                <Button variant="primary" onClick={()=>toggleSidebar()}>Start</Button>
             </Card.Body>
             </Card>
 
