@@ -4,6 +4,7 @@ export type CodePanelType = {
 }
 
 export type TutorialType = {
+    tutorialTitle: string,
     summaryDescription: string,
     tutorialDescription: string,
     codePanel: CodePanelType,
