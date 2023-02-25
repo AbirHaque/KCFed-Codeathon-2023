@@ -1,5 +1,4 @@
 import React from "react";
-//import "../../css/Heading.css";
 
 const Tutorial = (props) => {
   const number = props.number;
