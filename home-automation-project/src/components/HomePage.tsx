@@ -38,7 +38,7 @@ export function HomePage(){
         <div style={{marginTop: '5%', marginLeft: '4%', marginRight: '4%'}}>
 
             <Card>
-            <Card.Header as="h5">Featured</Card.Header>
+            <Card.Header as="h5">Problem Description</Card.Header>
             <Card.Body>
                 <Card.Title>Special title treatment</Card.Title>
                 <Card.Text>
