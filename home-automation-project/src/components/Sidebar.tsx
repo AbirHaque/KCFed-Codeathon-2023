@@ -1,11 +1,14 @@
 import {Button} from 'react-bootstrap';
+import { TutorialType } from '../types';
+import { Simulator } from './Simulator';
 
 type SidebarProps = {
     isExpanded: boolean,
-    toggleSidebar: () => void
+    toggleSidebar: () => void,
+    tutorial: TutorialType
 }
 
-export function Sidebar({isExpanded, toggleSidebar}: SidebarProps) {
+export function Sidebar({isExpanded, toggleSidebar, tutorial}: SidebarProps) {
 
     const width = isExpanded ? '100%' : '3%';
 
@@ -16,10 +19,11 @@ export function Sidebar({isExpanded, toggleSidebar}: SidebarProps) {
                                     width: width,
                                     position: 'fixed',
                                     zIndex: 1,
-                                    backgroundColor: 'black',
+                                    backgroundColor: 'white',
                                     overflowX: 'hidden',
                                     transition: '0.5s',
-                                    paddingTop: '60px'}}>
+                                    }}>
+        {isExpanded ? <Simulator tutorial={tutorial}/> : <></> }
         <Button style={{position: 'absolute', top:'50%'}} onClick={() => (toggleSidebar())}> {isExpanded ? '>' : '<'} </Button>
     </div>
     </>

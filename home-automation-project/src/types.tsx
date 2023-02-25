@@ -1,8 +1,12 @@
-export type Tutorial = {
-    title: string,
-    description: string
+export type CodePanelType = {
+    str_items: string,
+    answers: string
 }
 
-export type Simulator = {
-    
+export type TutorialType = {
+    summaryDescription: string,
+    tutorialDescription: string,
+    codePanel: CodePanelType,
+    baseImage: string,
+    resultImage: string
 }
