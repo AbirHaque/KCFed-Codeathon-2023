@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ButtonGroup, Button, ToggleButton} from 'react-bootstrap';
+import { ButtonGroup, Button, Nav, NavItem, NavLink, ToggleButton} from 'react-bootstrap';
 import { TutorialType } from '../types';
 import { Sidebar } from './Sidebar';
 
@@ -24,7 +24,7 @@ export function HomePage(){
                     
     return (
         <>
-        <ButtonGroup className='d-flex'>
+        {/* <ButtonGroup className='d-flex'>
                 {choices.map((choice, index) => (
                     <ToggleButton className=''
                                     key={index}
@@ -38,10 +38,24 @@ export function HomePage(){
                                     {choice.name}
                     </ToggleButton>
                 ))}
+        </ButtonGroup> */}
+
+        <Nav className="nav-pills nav-fill gap-2 p-1 small bg-primary rounded-5 shadow-sm" id="pillNav2" role="tablist" style={{ '--bs-nav-link-color': 'var(--bs-white)', '--bs-nav-pills-link-active-color': 'var(--bs-primary)', '--bs-nav-pills-link-active-bg': 'var(--bs-white)' }}>
+        {choices.map((choice, index) => (
+            <NavItem key={index}>
+            <NavLink className="nav-link rounded-5"
+                    id={`tutorial_${index}`}
+                    active={selectedTutorial === choice.value}
+                    onClick={() => setSelectedTutorial(choice.value)}>
+                {choice.name}
+            </NavLink>
+            </NavItem>
+        ))}
+        </Nav>
+
         <div>
             {tutorials.at(selectedTutorial)?.summaryDescription}
         </div>
-        </ButtonGroup>
             <Sidebar isExpanded={isExpanded} toggleSidebar={toggleSidebar} tutorial={tutorials.at(selectedTutorial)}/>
         
         </>
