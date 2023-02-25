@@ -4,17 +4,18 @@ import parse from 'html-react-parser';
 import "./CodePage.css";
 
 
-function check(textbox_answers) {
+function check(textbox_answers, setCorrectAnswerHandler) {
   var i = 0;
   var list_elements = document.getElementById("code_list").getElementsByTagName("div");
+  var good = true;
   for(var i=0;i < list_elements.length; i++) {
     if (list_elements[i].id[1]!=(i+1).toString()){
       document.getElementById("l"+(i+1)).style.color="red";
       document.getElementById("l"+(list_elements[i].id[1])).style.color="red";
+      good=false;
     }
     else{
       document.getElementById("l"+(i+1)).style.color="green";
-
     }
   }
   
@@ -24,6 +25,7 @@ function check(textbox_answers) {
     if (elem.value!=textbox_answers[i-1]){
       elem.style.background='red';
       elem.style.color='white';
+      good=false;
     }
     else{
       elem.style.background='green';
@@ -32,6 +34,7 @@ function check(textbox_answers) {
     i++;
     elem = document.getElementById("q"+i);
   }
+  setCorrectAnswerHandler(good);
 }
 
 
@@ -49,7 +52,7 @@ const CodePanel: React.FC = (props) => {
   const [items, setItems] = React.useState(randomized_items);
   return (
     <div>
-      <button style={{color:"white",backgroundColor:"green",width: "150px"}} onClick={e=>check(answers)}>Run</button>
+      <button style={{color:"white",backgroundColor:"green",width: "150px"}} onClick={e=>check(answers, props.setCorrectAnswerHandler)}>Run</button>
       <div style={back_style}>
       <text style={{color:"grey",width: "150px",paddingLeft: '10px'}}>File: <i  >main.py</i></text>
       <List  
