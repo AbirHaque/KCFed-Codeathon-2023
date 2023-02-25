@@ -4,7 +4,7 @@ import parse from 'html-react-parser';
 import "./CodePage.css";
 
 
-function check(textbox_answer, setCorrectAnswerHandler) {
+function check(textbox_answers, setCorrectAnswerHandler) {
   var i = 0;
   var list_elements = document.getElementById("code_list").getElementsByTagName("div");
   var good = true;
