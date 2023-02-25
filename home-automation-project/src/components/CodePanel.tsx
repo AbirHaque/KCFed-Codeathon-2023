@@ -4,7 +4,7 @@ import { List, arrayMove } from 'react-movable';
 
 const CodePanel: React.FC = (props) => {
   const style = { whiteSpace: 'pre', tabSize: 4 };
-  const str_items=props.str_items.split(/\r?\n/);
+  const str_items=props.str_items.split(/\r?\n/).sort(() => Math.random() - 0.5);
   const [items, setItems] = React.useState(str_items);
   return (
     <List

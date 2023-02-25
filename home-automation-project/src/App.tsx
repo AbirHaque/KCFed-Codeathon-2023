@@ -8,8 +8,7 @@ function App() {
 
   return (
     <div className="App">
-      <Tutorial number={1} title={"Variables"} text={"Ayylmao\nAyylmao"}/>
-      <CodePanel str_items={'i=0\nfor i in range(100):\n\tif i%4==0:\n\t\tprint(i)'}></CodePanel>
+      <CodePanel str_items={'ac_on=False\nfor time in range(0,24*60,60):\n\tif outside_temp>90:\n\t\tac_on=True\n\telse:\n\t\tac_on=False'}></CodePanel>
     </div>
   )
 }
