@@ -7,14 +7,15 @@ import "./CodePage.css";
 function check(textbox_answers) {
   var i = 0;
   var list_elements = document.getElementById("code_list").getElementsByTagName("div");
+  var good = true;
   for(var i=0;i < list_elements.length; i++) {
     if (list_elements[i].id[1]!=(i+1).toString()){
       document.getElementById("l"+(i+1)).style.color="red";
       document.getElementById("l"+(list_elements[i].id[1])).style.color="red";
+      good=false;
     }
     else{
       document.getElementById("l"+(i+1)).style.color="green";
-
     }
   }
   
@@ -24,6 +25,7 @@ function check(textbox_answers) {
     if (elem.value!=textbox_answers[i-1]){
       elem.style.background='red';
       elem.style.color='white';
+      good=false;
     }
     else{
       elem.style.background='green';
