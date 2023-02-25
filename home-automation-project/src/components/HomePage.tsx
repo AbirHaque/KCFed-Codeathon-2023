@@ -40,7 +40,7 @@ export function HomePage(){
             <Card>
             <Card.Header as="h5">Problem Description</Card.Header>
             <Card.Body>
-                <Card.Title>Special title treatment</Card.Title>
+                <Card.Title>{tutorials.at(selectedTutorial)?.tutorialTitle}</Card.Title>
                 <Card.Text>
                 {tutorials.at(selectedTutorial)?.summaryDescription}
                 </Card.Text>

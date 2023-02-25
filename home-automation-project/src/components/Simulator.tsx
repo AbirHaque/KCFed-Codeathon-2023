@@ -25,7 +25,7 @@ export function Simulator({tutorial}: SimulatorProps){
                 <Image src={image} style={{maxHeight: '100%', maxWidth: '100%'}}/>
             </Row>
             <Row style={{height: '50%'}}>
-                <Col style={{height: '100%', overflowY: 'scroll', whiteSpace: 'pre-line', maxWidth: '50%'}}>
+                <Col style={{height: '100%', overflowY: 'scroll', whiteSpace: 'pre-line', maxWidth: '50%', paddingTop: '30px'}}>
                     <ReactMarkdown>
                         {tutorial.tutorialDescription}
                     </ReactMarkdown>
