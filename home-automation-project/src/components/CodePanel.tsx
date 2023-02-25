@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { List, arrayMove } from 'react-movable';
 import parse from 'html-react-parser';
-
+import "./CodePage.css";
 
 
 function check(textbox_answers) {
@@ -38,7 +38,8 @@ function check(textbox_answers) {
 
 const CodePanel: React.FC = (props) => {
   const answers = props.answers.split(/\r?\n/);
-  const style = { whiteSpace: 'pre', tabSize: 4, listStyleType: "none"  };
+  const tab_style = { whiteSpace: 'pre', tabSize: 4, listStyleType: "none"  };
+  const back_style ={backgroundColor:'black', paddingBottom: '10px',  width:"100%"};
   const str_items=props.str_items.split(/\r?\n/);
   const randomized_items=[...str_items].sort(() => Math.random() - 0.5);
   const item_ptrs=[];
@@ -48,16 +49,21 @@ const CodePanel: React.FC = (props) => {
   const [items, setItems] = React.useState(randomized_items);
   return (
     <div>
-    <button onClick={e=>check(answers)}>Run</button>
-    <List
-      values={items}
-      onChange={({ oldIndex, newIndex }) => {
-          setItems(arrayMove(items, oldIndex, newIndex));
-        }
-      }
-      renderList={({ children, props }) => <ul id="code_list" {...props}>{children}</ul>}
-      renderItem={({ value, props }) => <p {...props} > <li style={style}>{parse(value)}</li></p>}
-    />
+      <button style={{color:"white",backgroundColor:"green",width: "150px"}} onClick={e=>check(answers)}>Run</button>
+      <div style={back_style}>
+      <text style={{color:"grey",width: "150px",paddingLeft: '10px'}}>File: <i  >main.py</i></text>
+      <List  
+          values={items}
+          onChange={({ oldIndex, newIndex }) => {
+              setItems(arrayMove(items, oldIndex, newIndex));
+              document.getElementById(parse(items[oldIndex]).props.id).style.color="white";
+              document.getElementById(parse(items[newIndex]).props.id).style.color="white";
+            }
+          }
+          renderList={({ children, props }) => <ul id="code_list" {...props}>{children}</ul>}
+          renderItem={({ value, props }) => <p className="react-movable-item" {...props} > <li style={tab_style}>{parse(value)}</li></p>}
+        />
+      </div>
     </div>
   );
 };
