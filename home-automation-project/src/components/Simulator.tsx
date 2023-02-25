@@ -30,7 +30,7 @@ export function Simulator({tutorial}: SimulatorProps){
                         {tutorial.tutorialDescription}
                     </ReactMarkdown>
                 </Col>
-                <Col style={{maxHeight: '100px'}}>
+                <Col style={{backgroundColor:"black", width: '50%'}}>
                 <CodePanel
                 str_items={tutorial.codePanel.str_items}
                 answers={tutorial.codePanel.answers} 
