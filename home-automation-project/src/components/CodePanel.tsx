@@ -4,16 +4,20 @@ import parse from 'html-react-parser';
 
 
 
-function check(textbox_answers,item_ptrs) {
+function check(textbox_answers) {
   var i = 0;
+  var list_elements = document.getElementById("code_list").getElementsByTagName("div");
+  for(var i=0;i < list_elements.length; i++) {
+    if (list_elements[i].id[1]!=(i+1).toString()){
+      document.getElementById("l"+(i+1)).style.color="red";
+      document.getElementById("l"+(list_elements[i].id[1])).style.color="red";
+    }
+    else{
+      document.getElementById("l"+(i+1)).style.color="green";
 
-  console.log(item_ptrs);
-  for(i = 0; i<item_ptrs.length;i++){
-    if(i!=item_ptrs[i]){
-      console.log("Wrong order!");
-      return;
     }
   }
+  
   var elem = document.getElementById("q1");
   i = 1;
   while (elem!=null){
@@ -34,7 +38,7 @@ function check(textbox_answers,item_ptrs) {
 
 const CodePanel: React.FC = (props) => {
   const answers = props.answers.split(/\r?\n/);
-  const style = { whiteSpace: 'pre', tabSize: 4 };
+  const style = { whiteSpace: 'pre', tabSize: 4, listStyleType: "none"  };
   const str_items=props.str_items.split(/\r?\n/);
   const randomized_items=[...str_items].sort(() => Math.random() - 0.5);
   const item_ptrs=[];
@@ -44,7 +48,7 @@ const CodePanel: React.FC = (props) => {
   const [items, setItems] = React.useState(randomized_items);
   return (
     <div>
-    <button onClick={e=>check(answers,item_ptrs)}>Run</button>
+    <button onClick={e=>check(answers)}>Run</button>
     <List
       values={items}
       onChange={({ oldIndex, newIndex }) => {
@@ -52,7 +56,7 @@ const CodePanel: React.FC = (props) => {
         }
       }
       renderList={({ children, props }) => <ul id="code_list" {...props}>{children}</ul>}
-      renderItem={({ value, props }) => <p {...props} > <div style={style}>{parse(value)}</div></p>}
+      renderItem={({ value, props }) => <p {...props} > <li style={style}>{parse(value)}</li></p>}
     />
     </div>
   );
