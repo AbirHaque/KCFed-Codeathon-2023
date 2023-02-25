@@ -53,6 +53,8 @@ const CodePanel: React.FC = (props) => {
       values={items}
       onChange={({ oldIndex, newIndex }) => {
           setItems(arrayMove(items, oldIndex, newIndex));
+          document.getElementById(parse(items[oldIndex]).props.id).style.color="black";
+          document.getElementById(parse(items[newIndex]).props.id).style.color="black";
         }
       }
       renderList={({ children, props }) => <ul id="code_list" {...props}>{children}</ul>}
