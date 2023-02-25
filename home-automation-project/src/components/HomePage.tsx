@@ -36,10 +36,10 @@ export function HomePage(){
         ))}
         </Nav>
 
-        <div style={{marginTop: '5%', marginLeft: '4%', marginRight: '4%'}}>
+        <div style={{marginTop: '4%', marginLeft: '4%', marginRight: '4%'}}>
 
             <Card>
-            <Card.Header as="h5">Problem Description</Card.Header>
+            <Card.Header as="h5">Tutorial Description</Card.Header>
             <Card.Body>
                 <Card.Title>{tutorials.at(selectedTutorial)?.tutorialTitle}</Card.Title>
                 <Card.Text>
