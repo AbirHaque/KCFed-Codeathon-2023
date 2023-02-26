@@ -90,7 +90,7 @@ The purpose of this code is to simulate the behavior of light bulb. The cur_time
  \`\`\`
 
 Your task is to turn on all of the light bulbs in our home if the time is greater than 7AM, but leave them off otherwise. The on status of each light bulb is stored in an list. Change the list elements such that all of the light bulbs have the on status as true.`},
-{tutorialTitle: 'Function',
+{tutorialTitle: 'Functions',
     baseImage: alternateLights,
     resultImage: specificTimeLightOn,
     codePanel: {str_items: '<div id="l1">bulb=False #Initialize bulb variable to off</div>\n<div id="l2">cur_time=17 #Set time to 5:00PM</div>\n<div id="l3">if cur_time>=<input id="q1" placeholder="Integer"></input>:</div>\n<div id="l4">\t bulb= <input id="q2" placeholder="Boolean"</input></div>',
