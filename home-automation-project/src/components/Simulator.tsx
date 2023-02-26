@@ -20,16 +20,16 @@ export function Simulator({tutorial}: SimulatorProps){
 
     return <>
         <Container style={{height: '100%', paddingLeft: '30px'}}>
-            <Row style={{height:'50%'}}>
+            <Row style={{height:'48%', marginTop: '1%'}}>
                 <Image src={image} style={{maxHeight: '100%', maxWidth: '100%', objectFit: 'contain'}}/>
             </Row>
-            <Row style={{height: '50%', paddingTop: '10px'}}>
+            <Row style={{height: '48%', paddingTop: '1%', marginBottom: '1%'}}>
                 <Col style={{height: '100%', overflowY: 'scroll', whiteSpace: 'pre-line', maxWidth: '50%', paddingTop: '30px', border: '3px solid black', borderRadius: '10px'}}>
                     <ReactMarkdown>
                         {tutorial.tutorialDescription}
                     </ReactMarkdown>
                 </Col>
-                <Col style={{height: '100%', backgroundColor:"black", width: '50%', border: '3px solid black', borderRadius: '10px'}}>
+                <Col style={{marginLeft: '5px', height: '100%', backgroundColor:"black", width: '50%', border: '3px solid black', borderRadius: '10px'}}>
                 <CodePanel
                 str_items={tutorial.codePanel.str_items}
                 answers={tutorial.codePanel.answers} 
