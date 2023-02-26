@@ -2,4 +2,8 @@
     z-index: 1;
     color:white;
   }
+
+  .react-movable-item :hover {
+    cursor: move;
+  }
   

@@ -37,7 +37,7 @@ We use the built-in function (more on that later!) print to print out a string. 
 if statement:
   condition to be executed 
 \`\`\`
-The purpose of this code is to simulate the behavior of light bulb. The cur_time variable represents the current time of day.The if statement tells the bulb to turn on if the current time is 5pm or later.
+The purpose of this code is to simulate the behavior of light bulb. The cur_time variable represents the current time of day. The if statement tells the bulb to turn on if the current time is 5pm or later. The animation above shows the time switching between 10 am and 5 pm; at both times, we see that the room is dark. Once you have filled in the blanks and rearranged the code statements, you will find that the light bulb turns on in the evening!
  `
 },
 {tutorialTitle: 'For Loops and Lists',
