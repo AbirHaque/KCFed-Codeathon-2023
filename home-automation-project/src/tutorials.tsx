@@ -1,23 +1,23 @@
 import { TutorialType } from "./types"
+import allLightsOn from './assets/allLightsOn.png'
+import allLightsOff from './assets/allLightsOff.png'
+import oneLightOn from './assets/oneLightOn.png'
 
 export const allTutorials: TutorialType[] = [
     {tutorialTitle: 'Variables',
-    baseImage: 'https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187.jpg',
-    resultImage: 'https://upload.wikimedia.org/wikipedia/commons/3/3a/Cat03.jpg',
-    codePanel: {str_items: '<div id="l1">ac_on=False #Initialize AC settings</div>\n<div id="l2">outside_temp=get_initial_temp() #Gets temperature at 12:00AM</div>\n<div id="l3">for time in range(0,24*60,<input id="q1" placeholder="Integer"></input>):</div>\n<div id="l4">\tif <input id="q2" placeholder="Variable name"></input>>90:</div>\n<div id="l5">\t\tac_on=True</div>\n<div id="l6">\telse:</div>\n<div id="l7">\t\tac_on=False</div>',
-                answers: '60\noutside_temp'},
-    summaryDescription: 'This is a summary',
-    tutorialDescription: `This lesson will explore the concept of variables in Python. To assign variables, we use the syntax:
- \`\`\`variable_name=value\`\`\`
-For our first task, we will be turning the light bulb in our home on through the power of magic, I mean, code. We represent the state of the bulb with True to represent on and False to represent off.
-The values True and False here are also called *boolean* values, and we will see them appear again in the next lesson when we code up conditionals. For now, `},
-
-{}
-
+    baseImage: allLightsOff,
+    resultImage: oneLightOn,
+    codePanel: {str_items: '<div id="l1">light1=get_light() # obtain the light bulb</div>\n<div id="l2">light1=<input id="q1" placeholder="Boolean"></input> # switch the lightbulb on</div>',
+                answers: 'True'},
+    summaryDescription: 'Welcome to the first tutorial in learning and applying Python programming to home automation! Over the course of these five tutorials, you will not only master the fundamentals coding, but also learn how to turn your home smart. In our first lesson, we will explore how we may switch a light bulb in our home on using the power of code. We will learn about variables and their various types and leave you to simulate the light bulb and watch the light fill the rooms using Python code.',
+    tutorialDescription: `When coding any program, we need to define what kinds of objects, whether they be numbers, strings (sequences of characters), or in our case, home appliances, we are working with. We do this using variables. To assign a variable, we use the syntax:
+\`\`\`variable_name=value\`\`\`
+The values True and False here are also called **boolean** values, which is a fancy way of saying they represent the 'truthiness' of something. We will see them appear again in the next lesson when we code up conditionals, in our case, the state of the light bulb. In the editing space to the right, we want to switch the light bulb on. Remember, a variable must always be defined before it can be modified!`},
+{},
 ,
 {tutorialTitle: 'For Loops and Lists',
-    baseImage: 'https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187.jpg',
-    resultImage: 'https://upload.wikimedia.org/wikipedia/commons/3/3a/Cat03.jpg',
+    baseImage: allLightsOff,
+    resultImage: allLightsOn,
     codePanel: {str_items: '<div id="l1">time=8 #8AM</div>\n<div id="l2">lights=[False,False,False,False]</div>\n<div id="l3">for index in <input id="q1" placeholder=""></input>(0,len(<input id="q2" placeholder=""></input>)):</div>\n<div id="l4">\tif time>7:</div>\n<div id="l5">\t\tlights[<input id="q3" placeholder=""></input>]=True</div>\n<div id="l6">\telse:</div>\n<div id="l7">\t\tlights[index]=<input id="q4" placeholder=""></input></div>',
                 answers: 'range\nlights\nindex\nFalse'},
     summaryDescription: 'Learn how loops and lists can be used in smart homes.',
