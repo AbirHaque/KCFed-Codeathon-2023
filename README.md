@@ -6,10 +6,10 @@ Many home automation platforms, such as Amazon Alexa, Google Home, and Home Assi
 ## Solution
 Simulearn is a React web app that presents users with a series of engaging Python coding exercises that tie beginner programming concepts to real-world home automation tasks. To make learning how to code easy for people of all backgrounds, we made our app user-friendly by offering instant feedback. In addition, Python is a great beginner's programming language! Users can modify code in an interactive code editor in their own web browser. Simulearn is an engaging and practical way for users to learn Python and apply it to their everyday lives.
 
-## Contributors
+## Team: N.A.R.C.S.
 Our 2023 KCFed Codeathon team consists of the following people:
-- Nikhil Raja
-- Abir Haque
-- Rahul Amatapu
-- Chase Burkdoll
-- Shad Ahmed
+- **N**ikhil Raja
+- **A**bir Haque
+- **R**ahul Amatapu
+- **C**hase Burkdoll
+- **S**had Ahmed
