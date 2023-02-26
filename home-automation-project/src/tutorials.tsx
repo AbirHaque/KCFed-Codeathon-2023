@@ -89,5 +89,33 @@ The purpose of this code is to simulate the behavior of light bulb. The cur_time
  grocery_list[3]='sugar'#Changes list into ['milk','bread','eggs','sugar','lettuce']
  \`\`\`
 
-Your task is to turn on all of the light bulbs in our home if the time is greater than 7AM, but leave them off otherwise. The on status of each light bulb is stored in an list. Change the list elements such that all of the light bulbs have the on status as true.`}
+Your task is to turn on all of the light bulbs in our home if the time is greater than 7AM, but leave them off otherwise. The on status of each light bulb is stored in an list. Change the list elements such that all of the light bulbs have the on status as true.`},
+{tutorialTitle: 'Function',
+    baseImage: alternateLights,
+    resultImage: specificTimeLightOn,
+    codePanel: {str_items: '<div id="l1">bulb=False #Initialize bulb variable to off</div>\n<div id="l2">cur_time=17 #Set time to 5:00PM</div>\n<div id="l3">if cur_time>=<input id="q1" placeholder="Integer"></input>:</div>\n<div id="l4">\t bulb= <input id="q2" placeholder="Boolean"</input></div>',
+                answers: '17\nTrue'},
+    summaryDescription: 'You will learn about how to use functions in real life applications.',
+    tutorialDescription: `Conditional statements, also known as control structures, are used in programming to enable the computer to make decisions based on certain conditions. Conditional statements allow programmers to control the flow of execution of their code based on the values of variables or other data.
+\`\`\`
+if statement:
+  condition to be executed 
+\`\`\`
+The purpose of this code is to simulate the behavior of light bulb. The cur_time variable represents the current time of day. The if statement tells the bulb to turn on if the current time is 5pm or later. The animation above shows the time switching between 10 am and 5 pm; at both times, we see that the room is dark. Once you have filled in the blanks and rearranged the code statements, you will find that the light bulb turns on in the evening!
+ `
+},
+{tutorialTitle: 'Classes',
+    baseImage: alternateLights,
+    resultImage: specificTimeLightOn,
+    codePanel: {str_items: '<div id="l1">bulb=False #Initialize bulb variable to off</div>\n<div id="l2">cur_time=17 #Set time to 5:00PM</div>\n<div id="l3">if cur_time>=<input id="q1" placeholder="Integer"></input>:</div>\n<div id="l4">\t bulb= <input id="q2" placeholder="Boolean"</input></div>',
+                answers: '17\nTrue'},
+    summaryDescription: 'You will learn how to use classes in real life applications.',
+    tutorialDescription: `Conditional statements, also known as control structures, are used in programming to enable the computer to make decisions based on certain conditions. Conditional statements allow programmers to control the flow of execution of their code based on the values of variables or other data.
+\`\`\`
+if statement:
+  condition to be executed 
+\`\`\`
+The purpose of this code is to simulate the behavior of light bulb. The cur_time variable represents the current time of day. The if statement tells the bulb to turn on if the current time is 5pm or later. The animation above shows the time switching between 10 am and 5 pm; at both times, we see that the room is dark. Once you have filled in the blanks and rearranged the code statements, you will find that the light bulb turns on in the evening!
+ `
+}
 ]
