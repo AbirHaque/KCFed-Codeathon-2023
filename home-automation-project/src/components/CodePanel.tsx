@@ -53,6 +53,7 @@ const CodePanel: React.FC = (props) => {
   return (
     <div>
       <button style={{color:"white",backgroundColor:"green",width: "150px"}} onClick={e=>check(answers, props.setCorrectAnswerHandler)}>Run</button>
+      <text style={{padding:"10px",color:"white"}}>Rearrange the lines in the right order and fill in the blanks.</text>
       <div style={back_style}>
       <text style={{color:"grey",width: "150px",paddingLeft: '10px'}}>File: <i  >main.py</i></text>
       <List  
