@@ -22,9 +22,9 @@ export function Simulator({tutorial}: SimulatorProps){
     return <>
         <Container style={{height: '100%', paddingLeft: '30px'}}>
             <Row style={{height:'50%'}}>
-                <Image src={image} style={{maxHeight: '100%', maxWidth: '100%'}}/>
+                <Image src={image} style={{maxHeight: '100%', maxWidth: '100%', objectFit: 'contain'}}/>
             </Row>
-            <Row style={{height: '50%'}}>
+            <Row style={{height: '50%', paddingTop: '10px'}}>
                 <Col style={{height: '100%', overflowY: 'scroll', whiteSpace: 'pre-line', maxWidth: '50%', paddingTop: '30px'}}>
                     <ReactMarkdown>
                         {tutorial.tutorialDescription}
