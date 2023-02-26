@@ -13,7 +13,6 @@ export const allTutorials: TutorialType[] = [
     tutorialDescription: `When coding any program, we need to define what kinds of objects, whether they be numbers, strings (sequences of characters), or in our case, home appliances, we are working with. We do this using variables. To assign a variable, we use the syntax:
 \`\`\`variable_name=value\`\`\`
 The values True and False here are also called **boolean** values, which is a fancy way of saying they represent the 'truthiness' of something. We will see them appear again in the next lesson when we code up conditionals, in our case, the state of the light bulb. In the editing space to the right, we want to switch the light bulb on. Remember, a variable must always be defined before it can be modified!`},
-{},
 ,
 {tutorialTitle: 'For Loops and Lists',
     baseImage: allLightsOff,
